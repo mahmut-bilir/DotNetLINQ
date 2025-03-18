@@ -25,3 +25,27 @@ Console.WriteLine(total);
 List<string> letters = new List<string> { "Mahmut", "Mesut", "Ömer", "İbrahim" };
 var result = letters.Aggregate((a, b) => a + " " + b);
 Console.WriteLine(result);
+
+Console.WriteLine("GrupBy example:");
+var people = new List<(string Name, string City)>
+{
+            ("Ahmet", "İstanbul"),
+            ("Mehmet", "Ankara"),
+            ("Ali", "İstanbul"),
+            ("Veli", "İzmir"),
+            ("Ayşe", "Ankara"),
+            ("Fatma", "İzmir")
+};
+
+var grups = people.GroupBy(s => s.City);
+
+foreach (var grup in grups)
+{
+    Console.WriteLine($"City: {grup.Key}");
+
+    foreach (var city in grup)
+    {
+        Console.WriteLine($"-{city.Name}");
+    }
+
+}
