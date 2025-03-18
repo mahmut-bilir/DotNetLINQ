@@ -12,9 +12,12 @@ foreach (var evenNumber in evenNumbers)
 
 Console.WriteLine("Select Example:");
 
-List<int> numbersForSelect = new List<int> { 1, 2, 3, 4, 5 };
-var squares = numbersForSelect.Select(s => s * s);
+
+var squares = numbers.Select(s => s * s);
 foreach (var square in squares)
 {
     Console.WriteLine(square);
 }
+Console.WriteLine("Aggregate example:");
+var total = numbers.Aggregate((total, number) => total + number);
+Console.WriteLine(total);
