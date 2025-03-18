@@ -9,3 +9,12 @@ foreach (var evenNumber in evenNumbers)
 {
     Console.WriteLine(evenNumber);
 }
+
+Console.WriteLine("Select Example:");
+
+List<int> numbersForSelect = new List<int> { 1, 2, 3, 4, 5 };
+var squares = numbersForSelect.Select(s => s * 2);
+foreach (var square in squares)
+{
+    Console.WriteLine(square);
+}
