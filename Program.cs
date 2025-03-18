@@ -21,3 +21,7 @@ foreach (var square in squares)
 Console.WriteLine("Aggregate example:");
 var total = numbers.Aggregate((total, number) => total + number);
 Console.WriteLine(total);
+
+List<string> letters = new List<string> { "Mahmut", "Mesut", "Ömer", "İbrahim" };
+var result = letters.Aggregate((a, b) => a + " " + b);
+Console.WriteLine(result);
